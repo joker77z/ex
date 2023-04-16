@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Home | Network</title>
+
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link rel="stylesheet" type="text/css" href="./common.css" />
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+          <li class="active"><a href="/intro.html">Network</a></li>
+          <li><a href="/read.html">Read</a></li>
+          <li><a href="/others.html">Others</a></li>
+        </ul>
+      </nav>
+
+      <header>
+        <h1>Network1</h1>
+      </header>
+
+      <main>
+        <section id="usingWifiOrEthernet">
+          <div id="usingWifiOrEthernetController" class="controller__wrapper">
+            <label><input type="radio" name="network" value="Using WiFi" checked />Using WiFi</label>
+            <label><input type="radio" name="network" value="Using Ethernet" />Using Ethernet</label>
+          </div>
+
+          <div class="input-label__wrapper">
+            <label class="input-label">SSID<input type="text" /></label>
+            <label class="input-label">Password<input type="text" /></label>
+          </div>
+        </section>
+
+        <section id="usingDHCP">
+          <div class="controller__wrapper">
+            <label class="toggle-row__wrapper">
+              <input id="hdcpToggle" class="toggle" type="checkbox" />
+              <span>Using DHCP</span>
+            </label>
+          </div>
+
+          <div class="input-label__wrapper">
+            <label class="input-label">IP<input type="text" /></label>
+            <label class="input-label">Gateway<input type="text" /></label>
+            <label class="input-label">Subnet<input type="text" /></label>
+          </div>
+        </section>
+
+        <section id="usingClientMode">
+          <div class="controller__wrapper">
+            <label class="toggle-row__wrapper">
+              <input id="clientModeToggle" class="toggle" type="checkbox" />
+              <span>Using Filter</span>
+            </label>
+          </div>
+
+          <div class="input-label__wrapper">
+            <label class="input-label">IP<input type="text" /></label>
+            <label class="input-label">Gateway<input type="text" /></label>
+            <label class="input-label">Subnet<input type="text" /></label>
+          </div>
+        </section>
+      </main>
+
+      <header>
+        <h1>Network1</h1>
+      </header>
+
+      <main>
+        <section id="usingWifiOrEthernet">
+          <div id="usingWifiOrEthernetController" class="controller__wrapper">
+            <label><input type="radio" name="network" value="Using WiFi" checked />Using WiFi</label>
+            <label><input type="radio" name="network" value="Using Ethernet" />Using Ethernet</label>
+          </div>
+
+          <div class="input-label__wrapper">
+            <label class="input-label">SSID<input type="text" /></label>
+            <label class="input-label">Password<input type="text" /></label>
+          </div>
+        </section>
+
+        <section id="usingDHCP">
+          <div class="controller__wrapper">
+            <label class="toggle-row__wrapper">
+              <input id="hdcpToggle" class="toggle" type="checkbox" />
+              <span>Using DHCP</span>
+            </label>
+          </div>
+
+          <div class="input-label__wrapper">
+            <label class="input-label">IP<input type="text" /></label>
+            <label class="input-label">Gateway<input type="text" /></label>
+            <label class="input-label">Subnet<input type="text" /></label>
+          </div>
+        </section>
+
+        <section id="usingClientMode">
+          <div class="controller__wrapper">
+            <label class="toggle-row__wrapper">
+              <input id="clientModeToggle" class="toggle" type="checkbox" />
+              <span>Using Filter</span>
+            </label>
+          </div>
+
+          <div class="input-label__wrapper">
+            <label class="input-label">IP<input type="text" /></label>
+            <label class="input-label">Gateway<input type="text" /></label>
+            <label class="input-label">Subnet<input type="text" /></label>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <ul>
+          <li>
+            <button id="save" class="save">Save</button>
+          </li>
+          <li>
+            <button id="refresh" class="refresh">Refresh</button>
+          </li>
+          <li>
+            <button id="reset" class="reset">Reset</button>
+          </li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- script -->
+    <script></script>
+  </body>
+</html>

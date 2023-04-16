@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Connect Reader via Bluetooth</title>
+
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link rel="stylesheet" type="text/css" href="./common.css" />
+    <link rel="stylesheet" type="text/css" href="./connectBluetooth.css" />
+  </head>
+  <!-- 
+    선택자(id, class) 기준
+    - id 선택자: control해야 하는 요소에 사용
+    - class 선택자: style만 제어하는데 사용
+
+    만들면서 고려한 사항
+    - "reset.css -> common.css -> 사용해야 할 css 파일"을 사용해서 중첩되게 했고 공통으로 사용하는 스타일 모듈화.
+    - bluetooth-item이 많을 때 블루투스 이미지를 너무 많이 사용되서 svg를 사용.
+
+    추후 고려해야 하는 사항
+    - #searchButton이 활성화 중일 때 stop으로 변경되면서 색상변경되면 명시적으로 상태가 바뀐것을 확인 가능
+    - #filter-checkbox가 false상태일 때 #filter-input-text에 disabled 속성 추가
+    - bluetooth가 하나도 없을 때 main요소에 "bluetooth를 찾을 수 없습니다."
+  -->
+  <body>
+    <div class="container">
+      <header>
+        <h1>Connect Reader via Bluetooth</h1>
+      </header>
+
+      <div class="controlpanel__container">
+        <div class="controlpanel__wrapper">
+          <div class="controlpanel__button-wrapper">
+            <button id="searchButton" class="search-button">Search</button>
+            <button id="deletePairingButton" class="delete-pairing-button">Delete Pairing</button>
+          </div>
+
+          <div class="controlpanel__filter-wrapper">
+            <label class="toggle-row__wrapper">
+              <input id="filterToggle" class="toggle" type="checkbox" />
+              <span class="">Using Filter</span>
+            </label>
+            <input id="filterInputText" class="filter-input-text" type="text" />
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <ul class="bluetooth-list__container">
+          <li class="bluetooth-item">
+            <div class="bluetooth-item__wrapper">
+              <span>LG100001</span>
+              <span class="bluetooth-address">5484:90:3D:49:09</span>
+            </div>
+          </li>
+          <li class="bluetooth-item">
+            <div class="bluetooth-item__wrapper">
+              <span>LG100001</span>
+              <span class="bluetooth-address">5484:90:3D:49:09</span>
+            </div>
+          </li>
+          <li class="bluetooth-item">
+            <div class="bluetooth-item__wrapper">
+              <span>LG100001</span>
+              <span class="bluetooth-address">5484:90:3D:49:09</span>
+            </div>
+          </li>
+          <li class="bluetooth-item">
+            <div class="bluetooth-item__wrapper">
+              <span>LG100001</span>
+              <span class="bluetooth-address">5484:90:3D:49:09</span>
+            </div>
+          </li>
+          <li class="bluetooth-item">
+            <div class="bluetooth-item__wrapper">
+              <span>LG100001</span>
+              <span class="bluetooth-address">5484:90:3D:49:09</span>
+            </div>
+          </li>
+          <li class="bluetooth-item">
+            <div class="bluetooth-item__wrapper">
+              <span>LG100001</span>
+              <span class="bluetooth-address">5484:90:3D:49:09</span>
+            </div>
+          </li>
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>

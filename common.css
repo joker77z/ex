@@ -1,0 +1,313 @@
+/* --------------------------------- common --------------------------------- */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Pretendard-Regular';
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  margin: 0 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ------------------------------- font color ------------------------------- */
+.white {
+  color: white;
+}
+
+.lightgray {
+  color: rgb(140, 140, 140);
+}
+
+/* -------------------------------- font size ------------------------------- */
+.small {
+  font-size: 12px;
+}
+
+/* ---------------------------- checkbox(toggle) ---------------------------- */
+.toggle-row__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-column__wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 2px;
+}
+
+/* filter checkbox */
+.toggle {
+  appearance: none;
+
+  position: relative;
+  border: 2px solid rgb(37, 37, 37);
+  border-radius: 20px;
+  cursor: pointer;
+
+  width: 36px;
+  height: 20px;
+}
+.toggle::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: scale(0.8);
+  background-color: rgb(37, 37, 37);
+  transition: left 250ms ease-out;
+}
+/* 체크 되었을 때 안에 엄지 */
+.toggle:checked::before {
+  background-color: white;
+  left: 16px;
+}
+.toggle:checked {
+  background-color: rgb(37, 37, 37);
+  border-color: rgb(37, 37, 37);
+  transition: 400ms ease-out;
+}
+
+/* ----------------------------------- nav ---------------------------------- */
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  width: 33.3%;
+  text-align: center;
+  position: relative;
+}
+
+nav ul li:not(:last-child)::before {
+  content: '|';
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+nav ul li a {
+  display: block;
+  position: relative;
+  padding: 20px 0;
+}
+
+.active a {
+  color: white;
+}
+
+.active a::before {
+  z-index: -1;
+
+  content: '';
+  display: block;
+  position: absolute;
+  opacity: 0.6;
+  border-radius: 20px;
+  width: 90px;
+  height: 32px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* background: linear-gradient(
+    101.83deg,
+    rgb(127, 135, 224) -13.2%,
+    rgb(38, 73, 202) -13.19%,
+    rgb(106, 118, 223) 46.63%,
+    rgb(50, 176, 247) 107.09%
+  ); */
+  background-image: linear-gradient(
+    101.83deg,
+    rgb(127, 135, 224) -13.2%,
+    rgb(38, 73, 202) -13.19%,
+    rgb(106, 118, 223) 46.63%,
+    rgb(50, 176, 247) 107.09%
+  );
+}
+
+/* --------------------------------- footer --------------------------------- */
+footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: space-between;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 400px;
+
+  background: black;
+  border-radius: 10px 10px 0 0;
+}
+
+footer ul li {
+  width: 33%;
+  text-align: center;
+  position: relative;
+}
+
+footer ul li:not(:last-child)::before {
+  content: '|';
+  color: white;
+  display: inline-block;
+
+  position: absolute;
+  right: -2px;
+  top: 24px;
+}
+
+footer ul li button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  padding: 20px 0px;
+  color: white;
+}
+
+.save {
+  color: #90ee90;
+}
+
+.save::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+
+  margin-right: 4px;
+
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="lightgreen" d="M21 7v12q0 .825-.587 1.413Q19.825 21 19 21H5q-.825 0-1.413-.587Q3 19.825 3 19V5q0-.825.587-1.413Q4.175 3 5 3h12Zm-9 11q1.25 0 2.125-.875T15 15q0-1.25-.875-2.125T12 12q-1.25 0-2.125.875T9 15q0 1.25.875 2.125T12 18Zm-6-8h9V6H6Z"/></svg>');
+}
+
+.refresh {
+  color: #add8e6;
+}
+
+.refresh::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+
+  margin-right: 4px;
+
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="lightblue" d="M17.65 6.35A7.958 7.958 0 0 0 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>');
+}
+
+.reset {
+  color: red;
+}
+
+.reset::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+
+  margin-right: 4px;
+
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="red" d="m13 11.6l2.5 2.5q.275.275.275.7q0 .425-.275.7q-.275.275-.7.275q-.425 0-.7-.275l-2.8-2.8q-.15-.15-.225-.338q-.075-.187-.075-.387V8q0-.425.288-.713Q11.575 7 12 7t.713.287Q13 7.575 13 8ZM12 21q-3.025 0-5.425-1.788q-2.4-1.787-3.225-4.662q-.125-.45.088-.85q.212-.4.662-.5q.425-.1.763.187q.337.288.462.713q.65 2.2 2.513 3.55Q9.7 19 12 19q2.925 0 4.962-2.038Q19 14.925 19 12t-2.038-4.963Q14.925 5 12 5q-1.725 0-3.225.8T6.25 8H8q.425 0 .713.287Q9 8.575 9 9t-.287.712Q8.425 10 8 10H4q-.425 0-.712-.288Q3 9.425 3 9V5q0-.425.288-.713Q3.575 4 4 4t.713.287Q5 4.575 5 5v1.35q1.275-1.6 3.113-2.475Q9.95 3 12 3q1.875 0 3.513.712q1.637.713 2.85 1.925q1.212 1.213 1.925 2.85Q21 10.125 21 12t-.712 3.512q-.713 1.638-1.925 2.85q-1.213 1.213-2.85 1.926Q13.875 21 12 21Z"/></svg>');
+}
+
+/* --------------------------------- section -------------------------------- */
+section {
+  position: relative;
+  margin-top: 20px;
+
+  border: none;
+  border-radius: 20px;
+  padding: 20px;
+
+  background: linear-gradient(101.83deg, rgb(106, 118, 223) 40.63%, rgb(127, 135, 224) -13.2%);
+  box-shadow: 0px 0px 30px rgba(91, 136, 249, 0.4);
+}
+
+.section__header {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.controller__wrapper {
+  padding: 10px;
+  background: rgb(234 233 255);
+  color: black;
+  font-weight: bold;
+  border-radius: 20px;
+
+  box-shadow: 0px 0px 20px rgb(136, 192, 255);
+}
+
+.controller__wrapper label:nth-child(2) {
+  margin-left: 20px;
+}
+
+/* ------------------------------- input label ------------------------------ */
+.input-label__wrapper {
+  padding: 0 10px;
+}
+
+.input-label {
+  margin-top: 20px;
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+/* --------------------------------- button --------------------------------- */
+.button {
+  padding: 6px 14px;
+  background: black;
+  color: white;
+  border-radius: 10px;
+}
+
+.clear-button__wrapper {
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: end;
+}

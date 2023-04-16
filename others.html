@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Home | others</title>
+
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link rel="stylesheet" type="text/css" href="./common.css" />
+    <link rel="stylesheet" type="text/css" href="./others.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="/index.html">Network</a></li>
+          <li><a href="/read.html">Read</a></li>
+          <li class="active"><a href="/others.html">Others</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <h2 class="section__header">F/W Information</h2>
+        <section>
+          <div class="input-label__wrapper">
+            <label class="input-label">Device ID<input type="text" /></label>
+            <label class="input-label">F/W Version<input type="text" /></label>
+          </div>
+          <div class="file-upload__container">
+            <div>
+              <label class="button" for="fileUpload">F/W file</label>
+              <!-- 업로드 된 파일명 #uploadFileName로 올리기 -->
+              <span id="uploadFileName" class="upload-file-name"></span>
+            </div>
+
+            <input id="fileUpload" type="file" style="display: none" />
+            <div class="file-update__wrapper">
+              <button id="fileUpdate" class="file-update button" type="button">Update</button>
+              <!-- 업로드 된 정도 width %로 표시 -->
+              <div id="updateGauge" class="update-gauge"></div>
+            </div>
+          </div>
+        </section>
+
+        <h2 class="section__header">Factory Default</h2>
+        <section>
+          <div class="factory-default__wrapper">
+            <span id="factoryDefaultText" class="factory-default-text">Initialize RFID Reader</span>
+            <button id="initialize" class="button" type="button">Initialize</button>
+          </div>
+        </section>
+
+        <h2 class="section__header">Command</h2>
+        <section>
+          <div class="command__container">
+            <div class="command-send__wrapper">
+              <input class="command-text" id="commandText" type="text" />
+              <button class="button" type="button">Send</button>
+            </div>
+            <textarea class="command-sub-text" id="commandSubText" type="text"></textarea>
+          </div>
+          <div class="clear-button__wrapper">
+            <button id="clearTableTagRead" class="button">Clear</button>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <ul>
+          <li>
+            <button id="save" class="save">Save</button>
+          </li>
+          <li>
+            <button id="refresh" class="refresh">Refresh</button>
+          </li>
+          <li>
+            <button id="reset" class="reset">Reset</button>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>

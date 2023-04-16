@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Home | read</title>
+
+    <!-- style -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link rel="stylesheet" type="text/css" href="./common.css" />
+    <link rel="stylesheet" type="text/css" href="./read.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="/index.html">Network</a></li>
+          <li class="active"><a href="/read.html">Read</a></li>
+          <li><a href="/others.html">Others</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <h2 class="section__header">Antenna Config</h2>
+        <section id="antennaConfig" class="antenna-config-section__container">
+          <label class="toggle-column__wrapper">
+            <span>1ch</span>
+            <input id="1chYn" class="toggle" type="checkbox" />
+          </label>
+          <label class="toggle-column__wrapper">
+            <span>2ch</span>
+            <input id="2chYn" class="toggle" type="checkbox" />
+          </label>
+          <label class="toggle-column__wrapper">
+            <span>3ch</span>
+            <input id="3chYn" class="toggle" type="checkbox" />
+          </label>
+          <label class="toggle-column__wrapper">
+            <span>4ch</span>
+            <input id="4chYn" class="toggle" type="checkbox" />
+          </label>
+
+          <label class="toggle-column__wrapper">
+            <span class="white">Output(dBm)</span>
+            <div>
+              <input id="antennaOutput" class="antenna-output-input" type="text" />
+              <span class="white">V</span>
+            </div>
+          </label>
+        </section>
+
+        <h2 class="section__header">RSSI Config</h2>
+        <section class="rssi-config-section__container">
+          <label class="toggle-row__wrapper">
+            <input id="usingRssiYn" class="toggle" type="checkbox" />
+            <span>Using RSSI</span>
+          </label>
+          <input id="rssiRange" type="range" />
+          <!-- UI를 잡기 위해 -87를 넣어놓은 상태 -->
+          <span id="rssiRangeValue" class="rssi-range-value">-87</span>
+        </section>
+
+        <h2 class="section__header">Buzzer Config</h2>
+        <section class="buzzer-config-section__container">
+          <label class="toggle-row__wrapper">
+            <input id="buzzerEnableYn" class="toggle" type="checkbox" />
+            <span>Enable</span>
+          </label>
+        </section>
+
+        <h2 class="section__header">Antenna Dwell</h2>
+        <section>
+          <div class="input-label__wrapper">
+            <label class="input-label-unit">
+              <span class="input-label-title">Cycle count</span>
+              <input id="cycleCount" class="input-label-number" type="text" />
+            </label>
+            <label class="input-label-unit">
+              <span class="input-label-title">Dwell time</span>
+              <input id="dwellTime" class="input-label-number" type="text" />
+              <span class="unit">(10ms)</span>
+            </label>
+            <label class="input-label-unit">
+              <span class="input-label-title">Dwell off time</span>
+              <input id="dwellOffTime" class="input-label-number" type="text" />
+              <span class="unit">(10ms)</span>
+            </label>
+          </div>
+        </section>
+
+        <div class="tag__header">
+          <h2>Tag Inventory</h2>
+          <input id="tagInventoryYn" class="toggle" type="checkbox" />
+        </div>
+        <section>
+          <table>
+            <colgroup>
+              <col width="60%" />
+              <col width="8%" />
+              <col width="8%" />
+              <col width="8%" />
+              <col width="8%" />
+              <col width="8%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <td>EPIC</td>
+                <td>R</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="clear-button__wrapper">
+            <button id="clearTableTagInventory" class="button">Clear</button>
+          </div>
+        </section>
+
+        <div class="tag__header">
+          <h2>Tag Read</h2>
+          <input id="tagReadYn" class="toggle" type="checkbox" />
+        </div>
+        <section>
+          <table>
+            <colgroup>
+              <col width="60%" />
+              <col width="8%" />
+              <col width="8%" />
+              <col width="8%" />
+              <col width="8%" />
+              <col width="8%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <td>EPIC</td>
+                <td>R</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="clear-button__wrapper">
+            <button id="clearTableTagRead" class="button">Clear</button>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <ul>
+          <li>
+            <button id="save" class="save">Save</button>
+          </li>
+          <li>
+            <button id="refresh" class="refresh">Refresh</button>
+          </li>
+          <li>
+            <button id="reset" class="reset">Reset</button>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
