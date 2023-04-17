@@ -99,3 +99,26 @@ td {
   display: flex;
   justify-content: end;
 }
+
+@media(min-width: 768px) {
+  .input-label__wrapper {
+    margin: 0 auto;
+  }
+
+  .input-label-number {
+    width: 100px !important;
+  }
+
+  .input-label-unit:not(:first-child) {
+    margin-top: 0px;
+  }
+
+  .input-label-unit {
+    min-width: 270px;
+  }
+
+  .input-label-unit .input-label-title {
+    flex-basis: auto;
+  }
+}
+

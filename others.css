@@ -74,3 +74,10 @@
   min-height: 100px;
   resize: vertical;
 }
+
+@media(min-width: 768px) {
+  .input-label__wrapper {
+    display: flex;
+    flex-flow: row;
+  }
+}

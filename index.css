@@ -1,16 +1,33 @@
 /* --------------------------------- header --------------------------------- */
-header {
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
 }
 
-header:nth-child(n + 2) {
+.section:nth-child(n + 2) {
   margin-top: 20px;
 }
 
-header h1 {
+.header h1 {
   font-size: 32px;
   font-weight: bold;
 }
+
+@media(min-width: 768px) {
+  .section_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2개의 동일한 너비의 열 생성 */
+    grid-gap: 10px; /* 아이템 사이의 간격 */
+  }
+
+  /* nav {
+    margin: 0 auto;
+  } */
+
+  .section:nth-child(n + 2) {
+    margin-top: 0px;
+  }
+}
+
