@@ -35,7 +35,7 @@ section {
 }
 
 .input-label-unit .input-label-title {
-  flex-basis: 120px;
+  flex-basis: 100px;
 }
 
 .input-label-unit .input-label-number {
@@ -102,11 +102,15 @@ td {
 
 @media(min-width: 768px) {
   .input-label__wrapper {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
     margin: 0 auto;
   }
 
   .input-label-number {
     width: 100px !important;
+    margin-left: 10px;
   }
 
   .input-label-unit:not(:first-child) {
@@ -114,7 +118,7 @@ td {
   }
 
   .input-label-unit {
-    min-width: 270px;
+    min-width: 220px;
   }
 
   .input-label-unit .input-label-title {

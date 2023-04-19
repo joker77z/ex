@@ -79,5 +79,27 @@
   .input-label__wrapper {
     display: flex;
     flex-flow: row;
+    margin-left: 15px;
+  }
+
+  .input-label__wrapper .input-label {
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .input-label__wrapper .input-label:nth-child(2) {
+    margin-left: 20px;
+  }
+
+  .input-label__wrapper .input-label input {
+    margin-left: 10px;
+  }
+
+  .command-sub-text {
+    min-height: 200px;
+  }
+
+  .command-text {
+    width: 90%;
   }
 }

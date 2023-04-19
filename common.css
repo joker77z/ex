@@ -314,7 +314,11 @@ section {
 
 /* --------------------------------- common --------------------------------- */
 @media(min-width: 768px) {
+  main {
+    margin: 0;
+  }
+
   .container {
-    max-width: 80%;
+    max-width: 90%;
   }
 }
