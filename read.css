@@ -27,7 +27,7 @@ section {
 
   display: flex;
   align-items: center;
-  min-width: 340px;
+  /* min-width: 340px; */
 }
 
 .input-label-unit:not(:first-child) {
