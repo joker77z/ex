@@ -100,7 +100,7 @@ td {
   justify-content: end;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .input-label__wrapper {
     display: flex;
     flex-flow: row;
@@ -126,3 +126,6 @@ td {
   }
 }
 
+.table-section {
+  overflow-x: auto;
+}

@@ -1,7 +1,8 @@
 /* --------------------------------- common --------------------------------- */
 @font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -11,12 +12,13 @@
 }
 
 body {
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   display: flex;
   justify-content: center;
 }
 
-main, .main {
+main,
+.main {
   margin: 0 20px;
 }
 
@@ -80,7 +82,7 @@ a {
   height: 20px;
 }
 .toggle::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   width: 16px;
@@ -113,7 +115,7 @@ nav ul li {
 }
 
 nav ul li:not(:last-child)::before {
-  content: '|';
+  content: "|";
   display: inline-block;
   position: absolute;
   right: 0;
@@ -133,7 +135,7 @@ nav ul li a {
 .active a::before {
   z-index: -1;
 
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   opacity: 0.6;
@@ -161,18 +163,19 @@ nav ul li a {
   );
 }
 
-/* --------------------------------- footer --------------------------------- */
-footer {
+/* --------------------------------- .common-button --------------------------------- */
+.common-button {
+  position: fixed;
   display: flex;
   justify-content: center;
-  margin-bottom: 70px;
+  bottom: 0;
+  width: 100%;
 }
 
-footer ul {
+.common-button ul {
   display: flex;
   justify-content: space-between;
 
-  position: fixed;
   bottom: 0;
   width: 100%;
   max-width: 400px;
@@ -181,14 +184,14 @@ footer ul {
   border-radius: 10px 10px 0 0;
 }
 
-footer ul li {
+.common-button ul li {
   width: 33%;
   text-align: center;
   position: relative;
 }
 
-footer ul li:not(:last-child)::before {
-  content: '|';
+.common-button ul li:not(:last-child)::before {
+  content: "|";
   color: white;
   display: inline-block;
 
@@ -197,7 +200,7 @@ footer ul li:not(:last-child)::before {
   top: 24px;
 }
 
-footer ul li button {
+.common-button ul li button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -212,7 +215,7 @@ footer ul li button {
 }
 
 .save::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -227,7 +230,7 @@ footer ul li button {
 }
 
 .refresh::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -242,7 +245,7 @@ footer ul li button {
 }
 
 .reset::before {
-  content: '';
+  content: "";
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -261,7 +264,11 @@ section {
   border-radius: 20px;
   padding: 20px;
 
-  background: linear-gradient(101.83deg, rgb(106, 118, 223) 40.63%, rgb(127, 135, 224) -13.2%);
+  background: linear-gradient(
+    101.83deg,
+    rgb(106, 118, 223) 40.63%,
+    rgb(127, 135, 224) -13.2%
+  );
   box-shadow: 0px 0px 30px rgba(91, 136, 249, 0.4);
 }
 
@@ -353,7 +360,7 @@ section {
 }
 
 /* --------------------------------- common --------------------------------- */
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   main {
     margin: 0;
   }
