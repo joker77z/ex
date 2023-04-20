@@ -127,5 +127,6 @@ td {
 }
 
 .table-section {
+  width: 100%;
   overflow-x: auto;
 }
