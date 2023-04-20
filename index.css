@@ -7,7 +7,7 @@
 }
 
 .section:nth-child(n + 2) {
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 .header h1 {
@@ -15,7 +15,7 @@
   font-weight: bold;
 }
 
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .section_container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2개의 동일한 너비의 열 생성 */
@@ -30,4 +30,3 @@
     margin-top: 0px;
   }
 }
-
